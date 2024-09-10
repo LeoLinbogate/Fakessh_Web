@@ -1,18 +1,18 @@
 <template>
-  <div class="circle-container">
-    <div class="circle">
+  <div class="rectangle-container">
+    <div class="rectangle">
       <div class="totalNumber">{{ totalNumber }}</div>
       <div class="description">{{ totalDesc }}</div>
     </div>
-    <div class="circle">
+    <div class="rectangle spaced">
       <div class="totalNumber">{{ addrNumber }}</div>
       <div class="description">{{ addrDesc }}</div>
     </div>
-    <div class="circle">
+    <div class="rectangle spaced">
       <div class="totalNumber">{{ usernameNumber }}</div>
       <div class="description">{{ userDesc }}</div>
     </div>
-    <div class="circle">
+    <div class="rectangle spaced">
       <div class="totalNumber">{{ passwdNumber }}</div>
       <div class="description">{{ passDesc }}</div>
     </div>
@@ -52,17 +52,18 @@ export default {
 </script>
 
 <style scoped>
-.circle-container {
+.rectangle-container {
   display: flex; /* 使用Flexbox布局 */
   justify-content: space-between; /* 均匀分配空间 */
-  width: 50%; /* 容器总宽度，根据需要调整 */
+  width: 100%; /* 容器总宽度，根据需要调整 */
+  padding: 0;
 }
 
-.circle {
-  width: 100px; /* 固定宽度 */
-  height: 100px; /* 固定高度 */
-  border-radius: 50%;
-  border: 3px solid rgba(19, 100, 19, 0.503);
+.rectangle {
+  width: 25%;
+  height: 80px; /* 固定高度 */
+  border: 2px solid #1da2e0;
+  border-radius: 10px; /* 圆角设置为 3px */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -70,9 +71,13 @@ export default {
   align-items: center;
 }
 
+.spaced {
+  margin-left: 15px; /* 从第二个矩形开始增加左边距 */
+}
+
 .totalNumber {
-  font-size: 20px;
-  color: rgb(235, 160, 39);
+  font-size: 25px;
+  color: rgb(89, 136, 229);
 }
 
 .description {

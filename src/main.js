@@ -25,7 +25,7 @@ const debounce = (fn, delay) => {
 
 const _ResizeObserver = window.ResizeObserver;
 //打开时自动进入日志页
-router.push({ name: "IntrusionLog" });
+// router.push({ name: "IntrusionLog" });
 
 window.ResizeObserver = class ResizeObserver extends _ResizeObserver {
   constructor(callback) {

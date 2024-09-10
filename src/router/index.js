@@ -5,15 +5,20 @@ import SystemManagement from "../views/SystemManagement.vue";
 
 const routes = [
   {
-    path: "/intrusion-log",
-    name: "IntrusionLog",
-    component: IntrusionLog,
+    path: "/",
+    redirect: "/trend-board", // 根路径重定向到 /trend-board
   },
   {
     path: "/trend-board",
     name: "TrendBoard",
     component: TrendBoard,
   },
+  {
+    path: "/intrusion-log",
+    name: "IntrusionLog",
+    component: IntrusionLog,
+  },
+
   {
     path: "/system-management",
     name: "SystemManagement",

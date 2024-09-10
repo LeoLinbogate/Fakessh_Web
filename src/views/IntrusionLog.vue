@@ -4,23 +4,26 @@
   </div>
 
   <div class="table-container" v-loading="loading">
-    <el-container
-      class="layout-container-demo"
-      style="height: 550px; padding-left: 0"
-    >
-      <el-main>
-        <el-scrollbar>
-          <el-table :data="records">
-            <el-table-column prop="date" label="Date"></el-table-column>
-            <el-table-column prop="time" label="Time"></el-table-column>
-            <el-table-column prop="client" label="Client"></el-table-column>
-            <el-table-column prop="addr" label="Address"></el-table-column>
-            <el-table-column prop="username" label="Username"></el-table-column>
-            <el-table-column prop="passwd" label="Password"></el-table-column>
-          </el-table>
-        </el-scrollbar>
-      </el-main>
-    </el-container>
+    <div style="border: 1px solid #ccc; border-radius: 10px">
+      <el-container style="height: 550px; padding-left: 0">
+        <el-main>
+          <el-scrollbar>
+            <el-table :data="records">
+              <el-table-column prop="date" label="Date"></el-table-column>
+              <el-table-column prop="time" label="Time"></el-table-column>
+              <el-table-column prop="client" label="Client"></el-table-column>
+              <el-table-column prop="addr" label="Address"></el-table-column>
+              <el-table-column
+                prop="username"
+                label="Username"
+              ></el-table-column>
+              <el-table-column prop="passwd" label="Password"></el-table-column>
+            </el-table>
+          </el-scrollbar>
+        </el-main>
+      </el-container>
+    </div>
+
     <el-pagination
       class="pagination-container"
       background
